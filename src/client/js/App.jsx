@@ -1,6 +1,6 @@
 import React from "react";
 import fetchRequest from "./routes";
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
@@ -10,10 +10,11 @@ function App() {
     const res = await fetchRequest();
     setData(res.body);
   };
+  
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
