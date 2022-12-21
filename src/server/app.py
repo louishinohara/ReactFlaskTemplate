@@ -8,7 +8,7 @@ CORS(app)
 
 assets = AssetEnv(app)
 assets.url = app.static_url_path
-assets.register('dist/bundle.js')
+assets.register('js_all', 'dist/bundle.js')
 
 
 @app.route("/intro")
@@ -26,4 +26,4 @@ def catch_all(path):
     return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(port=8080, debug=True)
